@@ -1,0 +1,26 @@
+{
+  "name": "can-of-books-backend",
+  "version": "1.0.0",
+  "description": "Backend for can of books",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TracyOakley/can-of-books-backend.git"
+  },
+  "author": "Tracy Oakley and Jason Christopher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TracyOakley/can-of-books-backend/issues"
+  },
+  "homepage": "https://github.com/TracyOakley/can-of-books-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2"
+  }
+}
