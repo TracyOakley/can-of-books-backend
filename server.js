@@ -7,6 +7,9 @@ const mongoose = require('mongoose');
 
 const Book = require('./models/book.js');
 
+// connect Mongoose to our MongoDB
+mongoose.connect(process.env.DB_URL);
+
 // add validation to confirm we are wired up to our mongo DB
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -14,8 +17,7 @@ db.once('open', function () {
   console.log('Mongoose is connected');
 });
 
-// connect Mongoose to our MongoDB
-mongoose.connect(process.env.DB_URL);
+
 
 
 const app = express();
@@ -44,7 +46,7 @@ async function getBooks(req, res, next) {
 }
 
 app.get('*', (request, response) => {
-  response.status(404).send('Not availabe');
+  response.status(404).send('Not available');
 });
 
 // ERROR
