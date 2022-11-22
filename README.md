@@ -4,7 +4,7 @@
 
 **Author**: Jason Christopher and Tracy Oakley
 
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.1.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ### Logistical
 
@@ -29,12 +29,18 @@ How will you approach each other and the challenge of building an application kn
 ## Overview
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+Run npm install and add own .env file
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
+
+Name of feature: Add Post and Delete Routes and Test in ThunderCli
+Estimate of time needed to complete: 1 hour 
+Start time: 1:15
+Finish time: 2:00
+Actual time needed to complete: 45 mins
 
 Name of feature: Set up Repos
 Estimate of time needed to complete: 1 hour 
