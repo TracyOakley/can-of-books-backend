@@ -25,11 +25,13 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3002;
 
-
+app.use(express.json());
 
 
 
 app.get('/books', getBooks);
+app.post('/books', postBooks);
+app.delete('/books/:id', deleteBooks);
 
 async function getBooks(req, res, next) {
   try {
@@ -40,6 +42,37 @@ async function getBooks(req, res, next) {
     next(err);
   }
 }
+
+
+
+async function postBooks(req, res, next) {
+  try {
+    
+    // req.body
+    // console.log(req.body);
+   
+    let createdBook = await Book.create(req.body);
+    console.log(createdBook);
+    res.send(createdBook);
+  } catch(err) {
+    next(err);
+  }
+}
+
+async function deleteBooks(req, res, next) {
+  try {
+    
+    console.log(req.params.id);
+
+    // Do not assume that you will response:
+    await Book.findByIdAndDelete(req.params.id);
+    res.send('Book deleted');
+  } catch(err) {
+    next(err);
+  }
+}
+
+
 
 app.get('/', (request, response) => {
 
