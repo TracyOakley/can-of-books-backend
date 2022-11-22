@@ -27,11 +27,7 @@ const PORT = process.env.PORT || 3002;
 
 
 
-app.get('/', (request, response) => {
 
-  response.send('test request received')
-
-})
 
 app.get('/books', getBooks);
 
@@ -44,6 +40,12 @@ async function getBooks(req, res, next) {
     next(err);
   }
 }
+
+app.get('/', (request, response) => {
+
+  response.send('test request received')
+
+})
 
 app.get('*', (request, response) => {
   response.status(404).send('Not available');
