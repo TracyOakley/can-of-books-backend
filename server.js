@@ -7,8 +7,7 @@ const mongoose = require('mongoose');
 const Book = require('./models/book.js');
 
 // connect Mongoose to our MongoDB
-// change back to process.env.DB_URL
-mongoose.connect('mongodb+srv://jchristopher2448:rw9iyDW6YtP6kSll@cluster0.phducsn.mongodb.net/CanOfBooks?retryWrites=true&w=majority');
+mongoose.connect(process.env.DB_URL);
 
 // add validation to confirm we are wired up to our mongo DB
 const db = mongoose.connection;
